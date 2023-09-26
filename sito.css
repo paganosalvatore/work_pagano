@@ -69,17 +69,38 @@ text-transform: uppercase;
 }
 
 
-#textarea,label,input,button{
-    display: block;
+textarea,label,input,button{
+    display: block; /* altrimenti compaiono sulla stessa linea, devono essere block level tag */
     font-size: 20px;
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* siccome il div my_form che contiene tutti questi blocchi ha una widht fissa
+     * se voglio centrare tutti questi figli (che ho trasformato in block-level e
+     * quindi occupano tutta la riga) basta che setto i margini destro e sinistro
+     * ad auto e chrome me li centra automaticamente
+     * */
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px; /* larghezza fissa per tutti */
 }
 
-#label_input{
-    margin: 0 auto 0 auto;
+.my_form {
+	width: 500px;
+	margin: 0 auto 0 auto; /* stesso discorso per il div, lo centro nella pagina */
 }
 
-#label_name{
-    text-align: center;
-    margin: 0 auto 0 auto;
+
+.my_form label {
+	/* lo ho dovuto aggiungere per centrare le label nel div my_form
+	 * se lo togli le label tornano allineate a sinistra non al centro
+	 * */
+	text-align: center;
 }
+
+
+/* allinea le immagini dello slideshow ho dovuto usare questo
+ * strano selettore perche la classe avevo lo spazio */
+div[class="mySlides fade"] {
+	text-align: center;
+}
+
