@@ -1,0 +1,149 @@
+<html>
+
+    <head>
+    <title>Home</title>
+    </head>
+
+    <body bgcolor="pink">
+    <link type="text/css" rel="stylesheet" href="sito.css"></style>
+    <h1 class="heading">Recipes World</h1>
+    <ul class="nav">
+        <center>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="recipe.html">Recipes</a></li>
+        <li><a href="suggest.html">Suggest</a></li>
+       </center>
+    </ul>
+    <h2 class="heading">Home</h2>
+    <!--<image class="foto">-->
+        <center>
+    <img src= "specialita_1.jpg" width="200" height="200">
+    <img src= "specialita_2.png" width="200" height="200">
+    <img src= "specialita_3.png" width="200" height="200">
+    <!--</image>-->
+    </center>
+
+
+    <h3 class="heading">OUR SPECIALITIES</h3>
+   <p class="p">see all model of cake and book it now!</p>
+   <p class="p1"><b>contact us</b><br>email: specialcakes@gmail.com <br>whatsapp: +39 311493021</p>
+   <br>
+   <h4 class="heading">how we make our cakes</h4>
+  
+       
+
+
+   <style>
+    * {box-sizing: border-box;}
+    body {font-family: Verdana, sans-serif;}
+    .mySlides {display: none;}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    
+    
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    
+    </style>
+
+<div class="slideshow-container">
+
+
+    <div class="mySlides fade">
+    
+      <img src="preparazione_torta1.jpg">
+    
+    </div>
+    
+    <div class="mySlides fade">
+    
+      <img id="image" src="preparazione_torta2.jpeg">
+    
+    </div>
+    
+    <div class="mySlides fade">
+    
+      <img id="image" src="preparazione_torta3.jpg">
+    
+    </div>
+    
+    <div class="mySlides fade">
+    
+      <img id="image" src="preparazione_torta4.jpg">
+    
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+
+
+    </body>
+</html>
